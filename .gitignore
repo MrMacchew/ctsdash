@@ -9,6 +9,7 @@ __pycache__/
 local_settings.py
 db.sqlite3
 media
+.vscode/
 
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
