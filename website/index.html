@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CTS Dashboard</title>
+
+    <!-- Via CDN's -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.js" integrity="sha256-jYMHiFJgIHHSIyPp1uwI5iv5dYgQZIxaQ4RwnpEeEDQ=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <script type="text/javascript" src="https://rawgit.com/kimmobrunfeldt/progressbar.js/1.0.0/dist/progressbar.js"></script>
+
+    <!-- End Via CDN's -->
+
+    <!-- Custom Scripts and Styles -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- End Custom Scripts and Styles -->
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row no-gutters">
+
+            <div class="col-10 dashboard">
+
+                <div class="top-banner">
+                    <div class="row">
+                        <div class="col banner-border" style="float: left;" align="left">
+
+                            <img src="icons/error.svg" height="75px" width="75px" style="float: left; margin: 20px;">
+                            <div class="details" style="margin-top: 20px;">
+                                <p class="no-padding">
+                                <table width="200px">
+                                <tr style="padding-right: 20px;">
+
+                                <td class="label">Building</td>
+                                <td class="details">Tracy Hall</td>
+                                </tr>
+                                <tr style="margin-right: 20px;">
+                                 <td class="label">Room Number</td>
+                                 <td class="details">232</td>
+                                </tr>
+                                <tr>
+                                      <td class="label">Technician</td>
+                                    <td class="details">Shap Neupane</td>
+
+                                </tr>
+                                </table>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            0 All Computers Are Working
+                        </div>
+                    </div>
+                    <!--      <div class="col" align="left" style="margin: 20px;">
+                            <div style="float: left; margin-right: 20px;">
+                            <img src="icons/error.svg" height="75px" width="75px">
+                            </div>
+
+                        </div> -->
+                    <!--          <div class="col stitched">
+                            World
+                        </div> -->
+                </div>
+
+                <div class="buildings">
+                    <div class="row row-building">
+                        <div class="col building no-padding">
+                            <img src="icons/office-block.svg" height="50px" width="50px">
+                            <p class="title">Tracy Hall</p>
+                            <div class="status">
+                                <p class="status-text" style="float: left;">status</p>
+                                <p class="status-percentage" style="float: right;">100%</p>
+                            </div>
+                        </div>
+                        <div class="col building no-padding">
+                            <img src="icons/office-block.svg" height="50px" width="50px">
+                            <p class="title">Lampros Hall</p>
+                            <div class="status">
+                                <p class="status-text" style="float: left;">status</p>
+                                <p class="status-percentage" style="float: right;">100%</p>
+                            </div>
+                        </div>
+                        <div class="col building no-padding">
+                            <img src="icons/office-block.svg" height="50px" width="50px">
+                            <p class="title">Social Science</p>
+                            <div class="status">
+                                <p class="status-text" style="float: left;">status</p>
+                                <p class="status-percentage" style="float: right;">100%</p>
+                            </div>
+                        </div>
+
+                        <div class="col building no-padding">
+                            <img src="icons/office-block.svg" height="50px" width="50px">
+                            <p class="title">Wattis Building</p>
+                            <div class="status">
+                                <p class="status-text" style="float: left;">status</p>
+                                <p class="status-percentage" style="float: right;">100%</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="buildings">
+                    <div class="row row-building">
+                        <div class="col building no-padding">
+                            <img src="icons/office-block.svg" height="50px" width="50px">
+                            <p class="title">Tracy Hall</p>
+                            <div class="status">
+                                <p class="status-text" style="float: left;">status</p>
+                                <p class="status-percentage" style="float: right;">100%</p>
+                            </div>
+                        </div>
+                        <div class="col building no-padding">
+                            <img src="icons/office-block.svg" height="50px" width="50px">
+                            <p class="title">Lampros Hall</p>
+                            <div class="status">
+                                <p class="status-text" style="float: left;">status</p>
+                                <p class="status-percentage" style="float: right;">100%</p>
+                            </div>
+                        </div>
+                        <div class="col building no-padding">
+                            <img src="icons/office-block.svg" height="50px" width="50px">
+                            <p class="title">Social Science</p>
+                            <div class="status">
+                                <p class="status-text" style="float: left;">status</p>
+                                <p class="status-percentage" style="float: right;">100%</p>
+                            </div>
+                        </div>
+
+                        <div class="col building no-padding">
+                            <img src="icons/office-block.svg" height="50px" width="50px">
+                            <p class="title">Wattis Building</p>
+                            <div class="status">
+                                <p class="status-text" style="float: left;">status</p>
+                                <p class="status-percentage" style="float: right;">100%</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="buildings">
+                    <div class="row row-building">
+                        <div class="col building no-padding">
+                            <img src="icons/office-block.svg" height="50px" width="50px">
+                            <p class="title">Tracy Hall</p>
+                            <div class="status">
+                                <p class="status-text" style="float: left;">status</p>
+                                <p class="status-percentage" style="float: right;">100%</p>
+                            </div>
+                        </div>
+                        <div class="col building no-padding">
+                            <img src="icons/office-block.svg" height="50px" width="50px">
+                            <p class="title">Lampros Hall</p>
+                            <div class="status">
+                                <p class="status-text" style="float: left;">status</p>
+                                <p class="status-percentage" style="float: right;">100%</p>
+                            </div>
+                        </div>
+                        <div class="col building no-padding">
+                            <img src="icons/office-block.svg" height="50px" width="50px">
+                            <p class="title">Social Science</p>
+                            <div class="status">
+                                <p class="status-text" style="float: left;">status</p>
+                                <p class="status-percentage" style="float: right;">100%</p>
+                            </div>
+                        </div>
+
+                        <div class="col building no-padding">
+                            <img src="icons/office-block.svg" height="50px" width="50px">
+                            <p class="title">Wattis Building</p>
+                            <div class="status">
+                                <p class="status-text" style="float: left;">status</p>
+                                <p class="status-percentage" style="float: right;">100%</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="buildings">
+                    <div class="row row-building">
+                        <div class="col building no-padding">
+                            <img src="icons/office-block.svg" height="50px" width="50px">
+                            <p class="title">Tracy Hall</p>
+                            <div class="status">
+                                <p class="status-text" style="float: left;">status</p>
+                                <p class="status-percentage" style="float: right;">100%</p>
+                            </div>
+                        </div>
+                        <div class="col building no-padding">
+                            <img src="icons/office-block.svg" height="50px" width="50px">
+                            <p class="title">Lampros Hall</p>
+                            <div class="status">
+                                <p class="status-text" style="float: left;">status</p>
+                                <p class="status-percentage" style="float: right;">100%</p>
+                            </div>
+                        </div>
+                        <div class="col building no-padding">
+                            <img src="icons/office-block.svg" height="50px" width="50px">
+                            <p class="title">Social Science</p>
+                            <div class="status">
+                                <p class="status-text" style="float: left;">status</p>
+                                <p class="status-percentage" style="float: right;">100%</p>
+                            </div>
+                        </div>
+
+                        <div class="col building no-padding">
+                            <img src="icons/office-block.svg" height="50px" width="50px">
+                            <p class="title">Wattis Building</p>
+                            <div class="status">
+                                <p class="status-text" style="float: left;">status</p>
+                                <p class="status-percentage" style="float: right;">100%</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col stats">
+                <h4 class="logo-title display-4">CTS Dashboard</h4>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    </script>
+</body>
+
+</html>

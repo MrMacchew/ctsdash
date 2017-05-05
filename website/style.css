@@ -1,0 +1,179 @@
+body {
+    /*https://coolors.co/51768e-6e658e-d6c5a5-af514c-9ca6ba*/
+    /*Color Palette For App*/
+
+    background: #2b5876;
+    /* fallback for old browsers */
+
+    background: -webkit-linear-gradient(to right, #2b5876, #4e4376);
+    /* Chrome 10-25, Safari 5.1-6 */
+
+    background: linear-gradient(to right, #2b5876, #4e4376);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: "Roboto", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+/*
+.container-fluid{
+    background: grey;
+    padding: 1.5rem, 2rem;
+    margin: 2.0rem;
+    margin-bottom: 1.0rem;
+    border-radius: 0.4rem;
+}
+*/
+
+.row-building {
+    margin-left: 0;
+    margin-right: 0;
+}
+.buildings {
+    margin-right: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.status-text {
+    font-size: 12px;
+    font-weight: 300;
+    color: #757575;
+    margin-bottom: 0;
+    margin-left: 0.6rem;
+    font-variant-caps: small-caps;
+    -moz-font-feature-settings: "smcp";
+    -webkit-font-feature-settings: "smcp";
+    font-feature-settings: "smcp";
+}
+
+.banner-border{
+
+}
+
+
+.stitched {
+    /*https://css-tricks.com/snippets/css/stitched-look/*/
+    margin-right: 0.8rem;
+
+   background: #D75A4A;
+   color: #fff;
+   font-weight: bold;
+   line-height: 1.3em;
+   border: 2px dashed #fff;
+   border-radius: 2px;
+   box-shadow: 0 0 0 4px #D75A4A, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+   text-shadow: -1px -1px #D75A4A;
+   font-weight: normal;
+}
+.status-percentage {
+    font-size: 12px;
+    font-weight: 400;
+    color: #757575;
+    margin-bottom: 0;
+    margin-right: 0.6rem;
+    letter-spacing: -0.5px;
+    font-variant-numeric: tabular-nums;
+    -moz-font-feature-settings: "tnum";
+    -webkit-font-feature-settings: "tnum";
+    font-feature-settings: "tnum";
+}
+
+.details{
+    font-size: 15px;
+    line-height: 1.2;
+    color: #333333;
+    font-variant-caps: small-caps;
+    -moz-font-feature-settings: "smcp";
+    -webkit-font-feature-settings: "smcp";
+    font-feature-settings: "smcp";
+}
+
+
+.label{
+    font-size: 15px;
+    line-height: 1.2;
+    color: #A9A9A9;
+    font-variant-caps: all-small-caps;
+    -moz-font-feature-settings: "c2sc", "smcp";
+    -webkit-font-feature-settings: "c2sc", "smcp";
+    font-feature-settings: "c2sc", "smcp";
+
+}
+/*.details p{
+  padding: 0 !important;
+    margin: 0 !important;
+    font-size: 18px;
+    font-weight: 400;
+    font-variant-caps: all-small-caps;
+    -moz-font-feature-settings: "c2sc", "smcp";
+    -webkit-font-feature-settings: "c2sc", "smcp";
+    font-feature-settings: "c2sc", "smcp";
+    line-height: 1.0;
+}*/
+.title {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 18px;
+    font-weight: 400;
+    font-variant-caps: all-small-caps;
+    -moz-font-feature-settings: "c2sc", "smcp";
+    -webkit-font-feature-settings: "c2sc", "smcp";
+    font-feature-settings: "c2sc", "smcp";
+}
+.no-padding {
+    margin: 0;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+.building {
+    background-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 0.36rem;
+    border-bottom-color: #49D49D;
+    padding-top: 0.8rem;
+    margin-top: 0.8rem;
+    text-align: center;
+    border-radius: 0.2rem;
+    white-space: nowrap;
+    margin-left: 0.8rem;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+}
+.menu {
+    text-align: center;
+}
+.banner-details {
+    text-align: left;
+    position: relative;
+    padding-top: 1.6rem;
+}
+.test {
+    float: left;
+    margin: 1.6rem;
+    display: inline-block;
+    height: 55%;
+}
+.top-banner {
+    background-color: white;
+    text-align: center;
+}
+.logo-title {
+    margin: 1.6rem;
+    font-size: 20px;
+    text-align: center;
+}
+.dashboard {
+    background-color: rgba(250, 250, 250, 0.6);
+    padding: 1.5rem, 2rem;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+}
+.stats {
+    background-color: rgba(245, 245, 245, 0.99);
+    padding: 1.5rem, 2rem;
+    margin-top: 1.0rem;
+    margin-bottom: 1.0rem;
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+}
