@@ -19,13 +19,16 @@ class UserManager(BaseUserManager):
         return user
 
     def create_user(self, email=None, password=None, **extra_fields):
-        extra_fields.setdefault('is_staff', False)
+        extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', False)
         return self._create_user(email, password, **extra_fields)
 
     def create_superuser(self, email, password, **extra_fields):
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
+        extra_fields.setdefault('is_manager', True)
+        extra_fields.setdefault('is_allow_delete', True)
+        extra_fields.setdefault('is_admin', True)
 
         if extra_fields.get('is_staff') is not True:
             raise ValueError('Superuser must have is_staff=True.')
@@ -43,8 +46,20 @@ class User(AbstractBaseUser, PermissionsMixin):
     last_name = models.CharField('last name', max_length=30, blank=True)
     date_joined = models.DateTimeField('date joined', auto_now_add=True)
     date_modified = models.DateTimeField('date modified', auto_now=True)
+    # Activate Deactivate Users without Deleating
     is_active = models.BooleanField('active' , default=True)
-    is_staff = models.BooleanField('staff' , default=False)
+
+    # Main Manager, usually should be a low number
+    is_manager = models.BooleanField('manager' , default=False)
+
+    # Dont Allow Staff to Delete, but if a person is trying to change rooms, manager can allow for few moments
+    is_allow_delete = models.BooleanField('allow_delete', default=False)
+
+    # Everyone should be a staff
+    is_staff = models.BooleanField('staff' , default=True)
+
+    # Allow Backend Login
+    is_admin = models.BooleanField('admin' , default=False)
 
     avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
 
