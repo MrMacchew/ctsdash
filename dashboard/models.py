@@ -53,6 +53,8 @@ class Ticket(models.Model):
     modified = models.DateTimeField('last modified', auto_now=True)
     fixed = models.BooleanField("fixed", default=False)
 
+
+
     def __str__(self):
         if len(self.notes) <= 50:
             return self.notes[0:(len(self.notes))]
