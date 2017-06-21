@@ -5,7 +5,9 @@ from django.views.generic.list import ListView
 from django.utils import timezone
 from .models import Room, Ticket
 from braces.views import LoginRequiredMixin, AnonymousRequiredMixin
-
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import redirect
+from django.http import HttpResponse, HttpResponseRedirect
 
 class HomePageView(TemplateView):
     template_name = 'home.html'
@@ -25,7 +27,30 @@ class RoomView(LoginRequiredMixin, DetailView):
     def get_context_data(self, **kwargs):
         context = super(RoomView, self).get_context_data(**kwargs) # get the default context data
         print(self)
-        context['tickets'] = Ticket.objects.filter(room=self.kwargs['pk']) # add extra field to the context
+        context['tickets'] = Ticket.objects.filter(room=self.kwargs['pk'], complete=False) # add extra field to the context
         return context
 
+class AllRoomView(LoginRequiredMixin, ListView):
+    template_name = 'all/rooms.html'
+    model = Room
+
+
+class TicketView(LoginRequiredMixin, DetailView):
+    template_name = 'ticket.html'
+    model = Ticket
+
+
+class AllTicketView(LoginRequiredMixin, ListView):
+    template_name = 'tickets.html'
+    model = Ticket
+
+
+@login_required
+def close_ticket(request, ticket_id):
+    try:
+        Ticket.objects.filter(id=ticket_id).update(complete=True)
+    except Ticket.DoesNotExist:
+        raise Http404("Poll does not exist")
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
 

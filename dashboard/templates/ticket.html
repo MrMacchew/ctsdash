@@ -1,0 +1,14 @@
+<center>
+<h3>{{ request.user.first_name }}'s Rooms<h3>
+<h2>{{ object.room.building.name }} - {{ object.room.number }} </h2>
+<a href="mailto:{{ object.room.user.email }}">{{ object.room.user.email }}</a>
+<hr>
+<p>
+<h3>Known Issues</h3>
+</center>
+<center>
+<b>Subject:</b>{{ object.subject }}
+<p><a href="{{ object.get_close_url }}">close</a></p>
+
+<p>{{ object.notes }}</p>
+</p>

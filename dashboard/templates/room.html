@@ -1,18 +1,23 @@
-<h1>{{ request.user }}'s Rooms</h1>
-<ul>
-    <center>{{ room.building.name }} {{ room.number }} </center>
-    <center>{{ room.user.email }}</center>
-</ul>
+<center>
+<h3>{{ room.user.email }}'s Rooms<h3>
+<h2>{{ room.building.name }} {{ room.number }} </h2>
+<a href="mailto:{{ room.user.email }}">{{ room.user.email }}</a>
+
+</center>
 
 
-<center><b><strong>Open Tickets For Room</strong></b></center>
+<hr/>
+
+<center><h3>Open Tickets For Room</h3></center>
 
 <center>
 <ul>
 {% for ticket in tickets %}
 
- - {{ ticket}}
+<a href="{{ ticket.get_absolute_url }}">{{ ticket}}</a>
 
+{% empty %}
+No known problems for this room
 {% endfor %}
 </ul>
 
