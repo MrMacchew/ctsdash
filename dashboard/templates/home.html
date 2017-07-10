@@ -1,6 +1,17 @@
-Home View
+{% extends 'base.html'%}
+{% load static from staticfiles %}
 
+{% block buildings %}
+<div class="grid-items">
+{% for building in buildings %}
+    <div class="grid-building-item">
+        <div>
+            <img class="grid-building-icon" src="{% static "img/building.svg"%}">
+            <br>
+            <a class="grid-building-title" href="{{ building.get_absolute_url }}">{{ building.name }}</a>
+        </div>
+    </div>
+{% endfor %}
+</div>
 
-{{ request.user }}
-
-<a href="{% url 'logout' %}">Logout</a>
+{% endblock buildings %}

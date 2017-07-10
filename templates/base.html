@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block webtitle %}CTS Dashboard{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static "css/style.css" %}">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="topbar">
+            <p class="nav-item"><a href="/" style="text-decoration: none;">HOME</a></p>
+        </div>
+        <div class="header">
+            <div class="header-inside">
+                <div>
+                    <p class="title">{% block title %}Dashboard{% endblock title%}</p>
+                    <button class="title-button">Create Ticket</button>
+                </div>
+            </div>
+        </div>
+        {% block buildings %}
+
+        {% endblock buildings %}
+        {% block content %}{% endblock %}
+
+    </div>
+    <script type="text/javascript" src="{% static "js/script.js" %}"></script>
+    {% block javascript%}
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+html{
+    height: 100%;
+}
+
+body {
+  background: #b993d6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #b993d6, #8ca6db); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #b993d6, #8ca6db); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: "Roboto", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.95);
+    height: 100%;
+    text-align: justify;
+
+}
+
+.number{
+    font-size: 60px;
+    font-family: SFUIDisplay-Light;
+    color: #FFFAFA;
+    letter-spacing: 0;
+}
+
+.text{
+/* Looks Good Here!: */
+    font-family: SFUIDisplay-Regular;
+    font-size: 16px;
+    color: #FFFAFA;
+    letter-spacing: 0;
+}
+
+.fixed{
+
+    background: #72BDA3;
+    text-align: center;
+    box-shadow: 0 2px 10px 2px #738981;
+    padding: 12px;
+}
+
+.fixed-total{
+/* Rectangle 3: */
+text-align: center;
+background: #6680AA;
+box-shadow: 0 2px 10px 2px #6C7584;
+padding: 12px;
+}
+
+.users{
+/* Rectangle 3: */
+background: #E58270;
+box-shadow: 0 2px 10px 2px rgba(151,103,94,0.50);
+text-align: center;
+padding: 12px;
+}
+
+.users .user-icon{
+    /* Oval: */
+/* Sketch doesnt export pattern fills at this point */
+border-radius: 500 solid #FFFFFF;
+border: 2px solid;
+
+}
+
+.label{
+/* Building: */
+font-family: SFUIDisplay-Light;
+font-size: 14px;
+color: #FFFAFA;
+text-align: left;
+}
+
+
+.data{
+    /* Tracy Hall: */
+font-size: 16px;
+color: #FFFAFA;
+font-family: SFUIDisplay-Regular;
+text-align: right;
+}
+
+.spacing{
+    margin-top: 30px;
+}
+
+
+/*
+* And with max cross-browser enabled.
+* Nobody should ever write this by hand.
+* Use a preprocesser with autoprefixing.
+*/
+.row.is-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.row.is-flex > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.stats{
+    height: 250px;
+    background: grey;
+    text-align: center;
+    vertical-align: middle;
+    line-height:215px;
+    padding: 30px;
+    font-family: SFUIDisplay-Light;
+    font-size: 4y 70px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.buildings{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+.building {
+    background-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 0.36rem;
+    border-bottom-color: #49D49D;
+    padding-top: 0.8rem;
+    border-radius: 0.2rem;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.building-title {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 18px;
+    text-align: center;
+    color: #333333;
+    font-weight: 400;
+    font-variant-caps: all-small-caps;
+    -moz-font-feature-settings: "c2sc", "smcp";
+    -webkit-font-feature-settings: "c2sc", "smcp";
+    font-feature-settings: "c2sc", "smcp";
+
+
+}
+
+.building-status-text {
+    font-size: 12px;
+    font-weight: 300;
+    color: #757575;
+    margin-left: 0.4rem;
+    font-variant-caps: small-caps;
+    -moz-font-feature-settings: "smcp";
+    -webkit-font-feature-settings: "smcp";
+    font-feature-settings: "smcp";
+}
+
+
+
+.building-percentage {
+    font-size: 13px;
+    font-weight: 400;
+    float: right;
+    color: #757575;
+    margin-bottom: 0;
+    margin-right: 0.4rem;
+    letter-spacing: -0.5px;
+    font-variant-numeric: tabular-nums;
+    -moz-font-feature-settings: "tnum";
+    -webkit-font-feature-settings: "tnum";
+    font-feature-settings: "tnum";
+}
+
+
+.nav-box{
+    background: #FAFAFA;
+    box-shadow: inset 1px 1px 25px 0 #FFFFFF;
+    margin-left: 15px;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.navbox-text {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: Roboto-Regular;
+  font-size: 15px;
+  color: #4A4A4A;
+}
+
+.room{
+    /* Oval 2: */
+background: #FFFFFF;
+border: 4px solid #9BA1D7;
+/* 101: */
+font-family: Roboto-Light;
+height: 30px;
+width: 30px;
+font-size: 20px;
+padding: 20px;
+border-radius: 10%;
+
+text-align: center;
+color: #A19ED7;
+}
+

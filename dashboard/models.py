@@ -14,6 +14,10 @@ class Building(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('building-rooms', kwargs={'pk': str(self.id)})
+
+
 class Room(models.Model):
     """
     Room model for rooms at WSU
@@ -59,7 +63,7 @@ class Ticket(models.Model):
 
 
     def get_close_url(self):
-        return reverse('ticket-close', kwargs={'ticket_id': str(self.id)})
+        return reverse('actions:ticket-close', kwargs={'ticket_id': str(self.id)})
 
 
     def get_absolute_url(self):

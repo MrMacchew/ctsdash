@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+{% load static from staticfiles %}
+{% load app_filters %}
+
+{% block title %}
+{{ object_list.0.building.name }}
+{% endblock %}
+
+
+{% block content %}
+
+        <div class="room">
+
+{% for object in object_list %}
+
+  {% ifchanged %}<p class="building-floor">{{ object.number | inflect }} Floor</p>{% endifchanged %}
+
+
+  <div class="buidling-room-container">
+                <div class="building-room">{{ object.number }}</div>
+                <div class="building-line"></div>
+                <div class="building-room-status">OK</div>
+
+            </div>
+{% endfor %}
+        </div>
+
+
+
+{% endblock content %}
+
+

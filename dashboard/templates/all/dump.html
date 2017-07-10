@@ -1,0 +1,48 @@
+dump.html
+
+<!-- <center><h1>All Rooms</h1></center>
+<center>{{ room.user.email }}</center>
+<center>
+{% for room in object_list %}
+
+  {% ifchanged %}<h1>{{room.building.name}}</h1>{% endifchanged %}
+
+  <a href="{{ room.get_absolute_url }} ">{{room.number}}</a>
+  <br>
+
+{% empty %}
+    <li>User has no rooms</li>
+{% endfor %}
+</center>
+
+ -->
+
+
+{#
+{% block content %}
+
+
+{% for room in object_list %}
+  {% ifchanged %}
+  </div>
+  <div class="room-block" style="margin-top: 15px;">
+    <p class="room-title">{{room.building.name}}</p>
+
+  {% endifchanged %}
+
+  <div class="numberCircle" style="color: black;">
+    <span><a href="{{ room.get_absolute_url }}" style="text-decoration: none; font-size: 20px; color: #0f0f0f;"  >{{room.number}}</span>
+  </div>
+    <!-- <span class="room"><a href="{{ room.get_absolute_url }} ">{{room.number}}</a></span> -->
+
+    {% if forloop.counter|divisibleby:7 %}<p>{% endif %}
+  <!-- <span class="room"><a href="{{ room.get_absolute_url }} ">{{room.number}}</a></span> -->
+
+
+{% empty %}
+    <li>User has no rooms</li>
+{% endfor %}
+</center>
+{% endblock %}
+
+#}

@@ -1,14 +1,76 @@
-<center><h1>All Rooms</h1></center>
-<center>{{ room.user.email }}</center>
-<center>
-{% for room in object_list %}
+{% extends 'base.html'%}
 
-  {% ifchanged %}<h1>{{room.building.name}}</h1>{% endifchanged %}
 
-  <a href="{{ room.get_absolute_url }} ">{{room.number}}</a>
-  <br>
+{% block content %}
 
-{% empty %}
-    <li>User has no rooms</li>
-{% endfor %}
-</center>
+
+<style type="text/css">
+#flex-container {
+  display: flex;
+}
+
+
+.big_box {
+  flex-grow: 100;
+  width: 8em;
+
+  /* 101: */
+font-family: SFUIDisplay-Light;
+font-size: 14px;
+color: rgba(0,0,0,0.87);
+letter-spacing: -0.47px;
+
+
+  /* Rectangle: */
+background: #FAFAFA;
+box-shadow: inset 2px 0 5px 0 rgba(0,0,0,0.21);
+border-radius: 0 5px 5px 0;
+}
+.small_box {
+  height: 4em;
+  width: 8em;
+
+  margin-left: -4em;
+  padding-top: 1.5em;
+
+  text-align: center;
+  transform: rotate(-90deg);
+  transform-origin: 75%;
+  border-radius: 5px 5px 0 0;
+  align-items: flex-end;
+  background: #F6F2F2;
+/* Tracy Hall: */
+  font-family: Roboto-Light;
+  color: #767575;
+
+}
+* { box-sizing: border-box; }
+</style>
+
+<div id="flex-container" style="margin-top: 15px;">
+  <div class="small_box" >Tracy Hall</div>
+  <div class="big_box">
+
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+  </div>
+</div>
+
+{% endblock %}

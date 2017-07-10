@@ -1,0 +1,197 @@
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+.container{
+    display: grid;
+}
+
+/*@media only screen and (max-width: 900px){
+
+}
+*/
+.topbar{
+    width: 100vw;
+    height: 70px;
+    background: #9E6ACA;
+    padding: 6px;
+    display: grid;
+    justify-items: center;
+}
+
+.header{
+    opacity: 0.96;
+    background: #7E52A6;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    height: 320px;
+    background:  url("../img/top-background.png");
+    background-size: 100% 100%;
+}
+
+.header-inside{
+    background-color: #7E52A6;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    opacity: 0.96;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title{
+    /* App Title: */
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    color: #FFFFFF;
+    margin-top: 0;
+    font-variant-caps: all-small-caps;
+    -moz-font-feature-settings: "c2sc", "smcp";
+    -webkit-font-feature-settings: "c2sc", "smcp";
+    font-feature-settings: "c2sc", "smcp";
+    margin-bottom: 0;
+
+}
+
+.title-button{
+    /* Rectangle 3: */
+    background: #82CDF2;
+    border-radius: 8px;
+    font-family: Raleway;
+    color: #FFFFFF;
+    font-size: 20px;
+    height: 60px;
+    border: none;
+    width: 180px;
+    margin-bottom: 0px;
+    font-variant-caps: small-caps;
+    -moz-font-feature-settings: "smcp";
+    -webkit-font-feature-settings: "smcp";
+    font-feature-settings: "smcp";
+}
+
+.nav-item{
+    /* ROOMS: */
+    font-family: Raleway;
+    font-style: bold;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.grid-items{
+   display: grid;
+   margin: 16px;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: auto;
+   grid-gap: 1rem;
+}
+
+
+.grid-building-item{
+    background: #FAFAFA;
+    font-family: Raleway;
+    color: #312F2F;
+    letter-spacing: -0.2px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+.grid-building-icon{
+    height: 60px;
+    border: 0px;
+
+
+}
+.grid-building-title{
+    font-family: Raleway;
+    font-size: 21px;
+    font-weight: 600;
+    color: #312F2F;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-variant-caps: all-small-caps;
+    -moz-font-feature-settings: "c2sc", "smcp";
+    -webkit-font-feature-settings: "c2sc", "smcp";
+    font-feature-settings: "c2sc", "smcp";
+    text-decoration: none;
+
+}
+
+.building-floor{
+    /* 1st Floor: */
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 28px;
+    text-align: center;
+    color: #4D4C4C;
+}
+
+.buidling-room-container{
+   background-color: #FAFAFA;
+   display: grid;
+   padding: 1rem;
+   grid-template-columns: auto 1fr auto;
+   margin-bottom: 0;
+
+
+}
+
+.building-room{
+    /* 101: */
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.87);
+    font-variant-numeric: proportional-nums;
+    -moz-font-feature-settings: "pnum";
+    -webkit-font-feature-settings: "pnum";
+    font-feature-settings: "pnum";
+    letter-spacing: -0.47px;
+
+}
+
+.building-room-status{
+    text-align: right;
+    /* OK: */
+    font-family: Raleway;
+    font-size: 16px;
+    color: #B8E986;
+    font-weight: 700;
+    letter-spacing: -0.44px;
+}
+.building-line{
+    border: 0 solid rgba(0,0,0,0.10);
+}
+
+.room{
+    /*margin:10px 5px 15px 20px; top margin is 10px. right margin is 5px. bottom margin is 15px. ...*/
+    /**/
+    display: grid;
+    grid-row-gap: 0.15rem;
+    margin: 0px 16px 16px 16px;
+}
+
+input[type=text] {
+    background-color: white;
+}
+
