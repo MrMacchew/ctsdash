@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+
+
+{% block title %} Issues {% endblock%}
+
+
+{% block content %}
+{% for object in object_list %}
+
+<a href="{{ object.get_absolute_url }}">
+<div class="block-padding ticket-grid ticket-row">
+<span class="ticket-subject">{{ object.subject }}</span>
+<span class="ticket-building">{{ object.room.building.name }} {{ object.room.number }}</span>
+</div>
+</a>
+{% empty %}
+<div class="block-padding ticket-grid ticket-row">
+    No open issues.
+</div>
+{% endfor %}
+{% endblock %}

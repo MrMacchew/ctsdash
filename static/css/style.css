@@ -7,10 +7,162 @@ body{
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 *,
 *:before,
 *:after{
     box-sizing: inherit;
+}
+
+
+.ticket-subject{
+    text-align: left;
+}
+
+.ticket-building{
+    text-align: right;
+    color: #9B9B9B;
+}
+
+.ticket-grid{
+    margin-top: 1rem;
+    display: grid;
+    grid-row-gap: 0.2rem;
+    white-space:nowrap;
+    grid-template-columns: auto auto;
+
+}
+
+.close-button-text{
+    font-size: 22px;
+    color: #FAFAFA;
+    font-variant-caps: all-small-caps;
+    -moz-font-feature-settings: "c2sc", "smcp";
+    -webkit-font-feature-settings: "c2sc", "smcp";
+    font-feature-settings: "c2sc", "smcp";
+    font-family: "Roboto", sans-serif;
+}
+.close-button-conatiner{
+    margin: 1rem;
+    background-color: #D9594C;
+    display: grid;
+    padding: 0.5rem;
+    margin-bottom: 0;
+
+}
+
+.open-button-conatiner{
+    margin: 1rem;
+    background-color: #9BC995;
+    display: grid;
+    padding: 0.5rem;
+    margin-bottom: 0;
+
+}
+
+.open-button-conatiner:hover{
+    background-color: #7bb873;
+}
+
+.close-button-conatiner:hover{
+    background-color: #d64a3c;
+}
+
+.block-padding{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    background-color: #FAFAFA;
+    display: grid;
+    padding: 1rem;
+    margin-bottom: 0;
+    font-size: 15px;
+    color: rgba(0,0,0,0.87);
+    font-variant-numeric: proportional-nums;
+    -moz-font-feature-settings: "pnum";
+    -webkit-font-feature-settings: "pnum";
+    font-feature-settings: "pnum";
+    font-family: "Roboto", sans-serif;
+}
+
+.block{
+    display: grid;
+    background-color: #FAFAFA;
+}
+
+.small{
+   display: block;
+   margin: 1px 0;
+}
+
+.avatar-frame{border: 2px solid #c7b89e;}
+.avatar-frame,.avatar-frame img{
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 30px; /* Saf3+, Chrome */
+    border-radius: 30px; /* Opera 10.5, IE 9 */
+    /*-moz-border-radius: 30px;  Disabled for FF1+ */
+}
+
+.user-room{
+    display: grid;
+    background-color: #FAFAFA;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem 1rem 0 1rem;
+    /*margin:10px 5px 15px 20px; top margin is 10px. right margin is 5px. bottom margin is 15px. ...*/
+
+    padding: 1rem;
+}
+
+.user-room-name{
+    font-family: Raleway;
+    font-size: 22px;
+    color: #4A4A4A;
+}
+
+.user-room-email{
+    font-family: Raleway-Medium;
+    font-size: 12px;
+    color: #9B9B9B;
+}
+
+.ticket-row:hover{
+ background-color:#edf8fd;
+}
+
+.ticket-row{
+    background-color: #FAFAFA;
+    display: grid;
+    padding: 1rem;
+    margin-bottom: 0;
+    font-size: 15px;
+    color: rgba(0,0,0,0.87);
+    font-variant-numeric: proportional-nums;
+    -moz-font-feature-settings: "pnum";
+    -webkit-font-feature-settings: "pnum";
+    font-feature-settings: "pnum";
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+
+
+.subtitle{
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 28px;
+    text-align: center;
+    color: #4D4C4C;
+    font-variant-caps: all-small-caps;
+    -moz-font-feature-settings: "c2sc", "smcp";
+    -webkit-font-feature-settings: "c2sc", "smcp";
+    font-feature-settings: "c2sc", "smcp";
 }
 
 .container{
@@ -24,15 +176,13 @@ body{
 .topbar{
     width: 100vw;
     height: 70px;
-    background: #9E6ACA;
+    background: #DB6A74;
     padding: 6px;
     display: grid;
-    justify-items: center;
 }
 
 .header{
     opacity: 0.96;
-    background: #7E52A6;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -43,7 +193,7 @@ body{
 }
 
 .header-inside{
-    background-color: #7E52A6;
+    background-color: #De6972;
     height: 100%;
     width: 100%;
     display: grid;
@@ -55,7 +205,7 @@ body{
 
 .title{
     /* App Title: */
-    font-family: Raleway, sans-serif;
+    font-family: Helvetica, sans-serif;
     font-weight: 700;
     font-size: 60px;
     color: #FFFFFF;
@@ -70,9 +220,9 @@ body{
 
 .title-button{
     /* Rectangle 3: */
-    background: #82CDF2;
+    background: #3081B4;
     border-radius: 8px;
-    font-family: Raleway;
+    font-family: Helvetica;
     color: #FFFFFF;
     font-size: 20px;
     height: 60px;
@@ -95,11 +245,11 @@ body{
 }
 
 .grid-items{
-   display: grid;
-   margin: 16px;
-   grid-template-columns: 1fr 1fr;
-   grid-template-rows: auto;
-   grid-gap: 1rem;
+ display: grid;
+ margin: 16px;
+ grid-template-columns: 1fr 1fr;
+ grid-template-rows: auto;
+ grid-gap: 1rem;
 }
 
 
@@ -123,9 +273,9 @@ body{
 
 }
 .grid-building-title{
-    font-family: Raleway;
+    font-family: Helvetica;
     font-size: 21px;
-    font-weight: 600;
+    font-weight: 400;
     color: #312F2F;
     margin-top: 0;
     margin-bottom: 0;
@@ -139,34 +289,43 @@ body{
 
 .building-floor{
     /* 1st Floor: */
-    font-family: Raleway;
+    font-family: Helvetica;
     font-weight: 500;
     font-size: 28px;
     text-align: center;
     color: #4D4C4C;
+    font-variant-caps: all-small-caps;
+    -moz-font-feature-settings: "c2sc", "smcp";
+    -webkit-font-feature-settings: "c2sc", "smcp";
+    font-feature-settings: "c2sc", "smcp";
+
 }
 
 .buidling-room-container{
-   background-color: #FAFAFA;
-   display: grid;
-   padding: 1rem;
-   grid-template-columns: auto 1fr auto;
-   margin-bottom: 0;
+ background-color: #FAFAFA;
+ display: grid;
+ padding: 1rem;
+ grid-template-columns: auto 1fr auto;
+ margin-bottom: 0;
 
 
 }
 
+
+.buidling-room-container:hover{
+ background-color:#edf8fd;
+}
 .building-room{
     /* 101: */
-    font-family: Raleway;
+    font-family: Helvetica;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 200;
     color: rgba(0,0,0,0.87);
     font-variant-numeric: proportional-nums;
     -moz-font-feature-settings: "pnum";
     -webkit-font-feature-settings: "pnum";
     font-feature-settings: "pnum";
-    letter-spacing: -0.47px;
+    letter-spacing: -0.25px;
 
 }
 
@@ -179,6 +338,11 @@ body{
     font-weight: 700;
     letter-spacing: -0.44px;
 }
+
+.not-working{
+    color: #ffa500;
+}
+
 .building-line{
     border: 0 solid rgba(0,0,0,0.10);
 }
@@ -195,3 +359,88 @@ input[type=text] {
     background-color: white;
 }
 
+
+
+.nav{
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  z-index: 3;
+  height: 54px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+
+/*Navbar Stuff */
+
+
+.navbar-default {
+  background-color: #db6a74;
+  border-color: #c54c57;
+}
+.navbar-default .navbar-brand {
+  color: #fafafa;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-text {
+  color: #fafafa;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #fafafa;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #c54c57;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #c54c57;
+}
+.navbar-default .navbar-toggle {
+  border-color: #c54c57;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #c54c57;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fafafa;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #fafafa;
+}
+.navbar-default .navbar-link {
+  color: #fafafa;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #fafafa;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #c54c57;
+}
+}

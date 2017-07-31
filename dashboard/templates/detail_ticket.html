@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+{% load static from staticfiles %}
+
+
+{% block title %}
+{{ object.room.building.name }}  {{ object.room.number }}
+{% endblock%}
+
+
+{% block content %}
+
+<div class="user-room">
+
+    <img class="avatar-frame" src="{% static "img/boy.svg" %}">
+    <span class="user-room-name">{{ object.room.user.first_name }} {{ object.room.user.last_name }}</span>
+    <span class="user-room-email">{{ object.room.user.email }}</span>
+</div>
+
+
+<p class="subtitle">{{ object.subject }}</p>
+<div class="block-padding">
+    {{ object.notes }}
+</div>
+
+{% if not object.complete %}
+
+<div class="close-button-conatiner">
+<a href="{{ object.get_close_url }}"><center><p class="close-button-text">Close</p></center></a>
+</div>
+{% else %}
+<div class="open-button-conatiner">
+<a href="{{ object.get_open_url }}"><center><p class="close-button-text">Open</p></center></a>
+</div>
+
+{% endif %}
+
+
+{% endblock content %}

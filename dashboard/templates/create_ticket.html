@@ -1,2 +1,12 @@
+{% extends 'base.html'%}
+{% load static from staticfiles %}
 {% load crispy_forms_tags %}
+
+{% block title %}
+    Create Issue
+{% endblock%}
+
+{% block content %}
 {% crispy form %}
+
+{% endblock %}

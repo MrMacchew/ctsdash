@@ -15,13 +15,19 @@
 
   {% ifchanged %}<p class="building-floor">{{ object.number | inflect }} Floor</p>{% endifchanged %}
 
+  <a href="{{ object.get_absolute_url }}">
 
-  <div class="buidling-room-container">
+  <div class="buidling-room-container" >
                 <div class="building-room">{{ object.number }}</div>
                 <div class="building-line"></div>
+                {% if object.working %}
                 <div class="building-room-status">OK</div>
+                {% else %}
+                <div class="building-room-status not-working">CHECK</div>
+                {% endif %}
 
             </div>
+            </a>
 {% endfor %}
         </div>
 

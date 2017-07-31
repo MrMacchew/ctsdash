@@ -1,0 +1,56 @@
+
+{% extends 'base.html'%}
+{% load static from staticfiles %}
+
+{% block title %}
+    {{ room.building.name }}<br class="small"/>{{ room.number }}
+{% endblock%}
+
+{% block content %}
+
+
+<div class="user-room">
+
+    <img class="avatar-frame" src="{% static "img/boy.svg" %}">
+    <span class="user-room-name">{{ room.user.first_name }} {{ room.user.last_name }}</span>
+    <span class="user-room-email">{{ room.user.email }}</span>
+</div>
+
+
+
+
+<p class="subtitle">Open Issues</p>
+
+<div class="room">
+
+{% for ticket in tickets %}
+<a href="{{ ticket.get_absolute_url }}">
+<div class="ticket-row">
+{{ forloop.counter }}. {{ ticket | capfirst }}
+</div>
+</a>
+{% empty %}
+<div class="ticket-row"><p>No ongoing issue for this room</p></div>
+
+{% endfor %}
+</div>
+
+
+<p class="subtitle">Closed Issues</p>
+
+<div class="room">
+
+{% for item in closed %}
+<a href="{{ item.get_absolute_url }}">
+<div class="ticket-row">{{ forloop.counter }}. {{ item }}</div>
+</a>
+{% empty %}
+<div class="ticket-row"><p>No recent problems for this room</p></div>
+
+{% endfor %}
+</div>
+
+
+
+
+{% endblock content %}
